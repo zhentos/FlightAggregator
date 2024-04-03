@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightAggregator.API", "FlightAggregator.API\FlightAggregator.API.csproj", "{F0421CAE-61D2-4B80-B4C7-C27E1DF39077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{5EED1793-0CDC-4AA7-AE83-75AC2A834830}"
+	ProjectSection(SolutionItems) = preProject
+		DB\flights.mdf = DB\flights.mdf
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightAggregator.Repositories", "FlightAggregator.Repositories\FlightAggregator.Repositories.csproj", "{198B9366-98E8-4795-9905-0401ECD19969}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightAggregator.Models", "FlightAggregator.Models\FlightAggregator.Models.csproj", "{066D1C27-E5C5-43C3-A1DA-C4E8B5A417A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightAggregator.Services", "FlightAggregator.Services\FlightAggregator.Services.csproj", "{C1919087-9C32-47A6-9C2D-293A9BFDEBCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightAggregator.Tests", "FlightAggregator.Tests\FlightAggregator.Tests.csproj", "{64C46959-BCD7-43C9-8C13-5884F5F66887}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F6E4FCA2-BD47-484B-95EF-1B748E476BC5}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0421CAE-61D2-4B80-B4C7-C27E1DF39077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0421CAE-61D2-4B80-B4C7-C27E1DF39077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0421CAE-61D2-4B80-B4C7-C27E1DF39077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0421CAE-61D2-4B80-B4C7-C27E1DF39077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198B9366-98E8-4795-9905-0401ECD19969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198B9366-98E8-4795-9905-0401ECD19969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198B9366-98E8-4795-9905-0401ECD19969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198B9366-98E8-4795-9905-0401ECD19969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{066D1C27-E5C5-43C3-A1DA-C4E8B5A417A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{066D1C27-E5C5-43C3-A1DA-C4E8B5A417A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{066D1C27-E5C5-43C3-A1DA-C4E8B5A417A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{066D1C27-E5C5-43C3-A1DA-C4E8B5A417A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1919087-9C32-47A6-9C2D-293A9BFDEBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1919087-9C32-47A6-9C2D-293A9BFDEBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1919087-9C32-47A6-9C2D-293A9BFDEBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1919087-9C32-47A6-9C2D-293A9BFDEBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C46959-BCD7-43C9-8C13-5884F5F66887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C46959-BCD7-43C9-8C13-5884F5F66887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C46959-BCD7-43C9-8C13-5884F5F66887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C46959-BCD7-43C9-8C13-5884F5F66887}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A31AA826-FE16-419D-AEE3-F74064A4E44E}
+	EndGlobalSection
+EndGlobal
