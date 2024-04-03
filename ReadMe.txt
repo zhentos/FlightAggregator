@@ -1,3 +1,7 @@
+
+Демонстрация запуска API и его работы:
+https://www.loom.com/share/89858ded7b324f8897dfabd3bc215ec0
+
 НЕКОТОРЫЕ ДОПУЩЕНИЯ:
 
 	1. Так как это демо-приложение, то строку подключения к базе данных, 
@@ -11,7 +15,8 @@
 	поэтому данный пункт не рассматривается в реализации. Операцию по отправке платежей выполнял бы отдельный сервис.
 
 	4. Требований к контейнеризации (Docker) и оркестрации (Kubernates) в техническом задании нет,
-	поэтому приложение не было упаковано в контейнер.
+	поэтому приложение не было упаковано в контейнер. В реальной системе нам бы понадобился балансировщик нагрузки, репликация
+	или шердинг БД, горизонтальной масштабирование сервисов.
 
 	5. Я не используем средства маппинга(Automapper) моделей для простоты и ускорения процесса разработки
 	Для логирования событий был использован  стандартный Microsoft.Extensions.Logging.Ilogger  интерфейс.
@@ -52,3 +57,50 @@
 	данного контроллера документированы. В проект добавлена интеграция со Swagger. 
 
 	5. В проекте Tests представлено несколько Unit-тестов для контроллера и одного из сервисов, согласно условиям тех.задания.
+
+	ПРИМЕРЫ ЗАПРОСОВ И ОТВЕТОВ от API:
+
+	REQUEST:
+
+	curl -X 'POST' \
+	  'https://localhost:7272/Flight/search' \
+	  -H 'accept: text/plain' \
+	  -H 'Content-Type: application/json' \
+	  -d '{
+	  "from": "Minsk",
+	  "to": "Moskva",
+	  "flightDate": "2024-04-22"
+	}'
+
+	RESPONSE BODY:
+	
+	[
+	  {
+		"companyId": 2,
+		"companyName": "Aeroflot",
+		"from": "Minsk",
+		"to": "Moskva",
+		"flightDate": "2024-04-22T00:00:00",
+		"isAvailable": true
+	  },
+	  {
+		"companyId": 3,
+		"companyName": "Aurora",
+		"from": "Minsk",
+		"to": "Moskva",
+		"flightDate": "2024-04-22T00:00:00",
+		"isAvailable": true
+	  }
+	]
+
+    curl -X 'POST' \
+	  'https://localhost:7272/Flight/book' \
+	  -H 'accept: text/plain' \
+	  -H 'Content-Type: application/json' \
+	  -d '{
+	  "companyId": 1,
+	  "flightId": 2
+	}'
+
+	RESPONSE BODY:
+	true
