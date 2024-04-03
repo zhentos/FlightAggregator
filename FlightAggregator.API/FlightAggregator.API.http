@@ -1,0 +1,6 @@
+@FlightAggregator.API_HostAddress = http://localhost:5007
+
+GET {{FlightAggregator.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
